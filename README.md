@@ -155,6 +155,7 @@ requestbody -
 <p><u>Api Details:</u> Rest API to retrieve all the available Projects from the database.</p>
 URL endpoint - {hostname}/project/getprojects<br />
 http method - "GET"<br />
+produces - "application/json" and "application/xml". Add Accept header for "application/xml"
 <pre>
 responsebody -
 {
@@ -242,6 +243,7 @@ requestbody -
 <p><u>Api Details:</u> Rest API to retrieve all the available FeatureProject from the database.</p>
 URL endpoint - {hostname}/featureprojects/getfeatureprojects<br />
 http method - "GET"<br />
+produces - "application/json" and "application/xml". Add Accept header for "application/xml"
 <pre>
 responsebody -
 {
@@ -367,6 +369,7 @@ search keyword from the query parameter. Search execution is based on the follow
 URL endpoint - {hostname}/featureprojects/search?keyword={searchkeyword}<br />
 http method - "GET"<br />
 searchkeyword = workday<br />
+produces - "application/json" and "application/xml". Add Accept header for "application/xml"
 <pre>
 responsebody -
 {
