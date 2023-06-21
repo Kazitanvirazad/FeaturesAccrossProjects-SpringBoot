@@ -1,0 +1,22 @@
+insert into category (category_name) values('ScreenRecording'),('Payment'),('Shop the look'),('Cart Abandonment'),('Web Services'),('Taxation'),('QA'),('CMS'),('Compare'),('Product Cycler'),('Image management'),('Replenishment'),('Marketing'),('E-Magzine'),('Coupon Code'),('Customizer'),('ExpressShipping'),('OMS'),('Recommendations'),('IP Based Redirection'),('SocialSharing'),('Gifting'),('AB Testing'),('Affiliate Marketing'),('Plans'),('Feeds'),('Login'),('SMS'),('Email Marketing'),('Data Exchange'),('Social Login'),('Page Template'),('Order Management'),('Responsive Design'),('Subscription'),('Order Tracking'),('Address Verification'),('Promotion'),('Loyalty'),('Maps'),('Refferal'),('Tag Manager'),('PaymentRefund'),('Search Engine Optimization'),('Virtual Try-on'),('Shopping'),('Product Search'),('Community'),('Crash Reporting'),('PIM'),('Search'),('CRM'),('Gift Card'),('Shipping'),('Accessibility'),('NFR'),('Translation'),('Quotes'),('Social Media'),('Native App'),('Stock Availability Service'),('Chat'),('Rating & Reviews'),('Scheduled Delivery'),('Captcha'),('Analytics'),('Internationalization'),('Video Management'),('Authentication &Authorization'),('Accessibility Testing'),('Store Locator'),('Tanslation'),('Address Validation'),('BMExtension'),('Penetration Testing'),('Social Registration'),('Cross Border Fulfillment'),('Infra'),('BOPIS'),('Online Optical System-Benefits and Insurance'),('CDN'),('Wishlist'),('Fraud Check'),('Survey'),('Testimonial'),('CaseSurvey'),('OrderReplishment'),('appointment'),('Product Selection &Checkout'),('SizeGuide'),('Browser Check'),('Personalization'),('Postcode Lookup'),('Notification'),('Monitoring'),('Age Verification'),('Customer Service'),('Headless'),('UGC'),('Cookie');
+
+
+insert into client_lead (client_type) values ('External'),('Link Partner'),('client_base'),('Internal');
+
+
+insert into domain (domain_name) values ('eCommerce');
+
+
+insert into practice (practice_name) values ('Salesforce B2C'),('SFCC');
+
+
+insert into region (region_id, region_name) values ('US','United States of America'), ('CA','Canada'), ('ES','Spain'), ('FR','France'), ('UK','United Kingdom'), ('IT','Italy'), ('PL','Poland'), ('DK','Denmark'), ('DE','Germany'), ('NL','Netherlands'), ('SE','Sweden'), ('AU','Australia'), ('HK','Hongkong'), ('NZ','New Zealand'), ('SG','Singapore'), ('JP','Japan'), ('CZ','Czech Replublic'), ('CH','Switzerland'), ('IE','Ireland'), ('HU','Hungary'), ('BE','Belgium'), ('PT','Portugal'), ('GR','Greece'), ('SA','South Africa'), ('TR','Turkey'), ('CN','China'), ('FI','Finland'), ('LU','Luxemberg'), ('NO','Norway'), ('RO','Romania'), ('SK','Slovakia'), ('EU','Europe');
+
+
+insert into sector (sector_name) values ('Retail'), ('HealthCare'), ('FMCG');
+
+
+insert into sub_category (subcategory_name) values ('CustomFeature'),('Tracking'),('SF Integration'),('Platform'),('Accessibility'),('Performance'),('Initial Setup'),('Integration');
+
+
+insert into userdata (user_id,company_id,email,first_name,last_name) values  ('Suman123653','123653','suman@company.com','Suman',null), ('Bhanu458902','458902','Bhanu@company.com','Bhanu',null), ('Hemant156905','156905','HemantArora@company.com','Hemant','Arora'), ('Anita541893','541893','AnitaMani@company.com','Anita','Mani'), ('Rachit806426','806426','RachitGoel@company.com','Rachit','Goel'), ('senthilkumar689431','689431','senthilkumar@company.com','senthilkumar',null), ('Anuj790453','790453','AnujJain@company.com','Anuj','Jain'), ('Nishant675221','675221','NishantGupta@company.com','Nishant','Gupta'), ('Bharath790454','790454','BharathReddy@company.com','Bharath','Reddy'), ('Kazitanvir124678','124678','kazi.tanvirazad@company.com','Kazi','tanvir Azad');-- Search Query for FeatureProjectSELECT FP.* FROM feature_project FP , project P, feature F where FP.project_name = P.project_name AND FP.feature_ref = F.feature_ref AND (FP.project_name ILIKE :searchKey OR	FP.feature_ref ILIKE :searchKey OR FP.artifact_detail ILIKE :searchKey OR	FP.poc_user_id ILIKE :searchKey OR FP.used_year ILIKE :searchKey OR FP.alternate_poc_user_id ILIKE :searchKey OR P.sector_sector_name ILIKE :searchKey OR P.client_base ILIKE :searchKey OR P.practice_practice_name ILIKE :searchKey OR P.domain_domain_name ILIKE :searchKey OR F.feature_name ILIKE :searchKey OR F.category_category_name ILIKE :searchKey OR F.sub_category_subcategory_name ILIKE :searchKey OR F.type ILIKE :searchKey)
