@@ -14,7 +14,7 @@ public class ProjectDTO implements Serializable {
 	private static final long serialVersionUID = 2064210978529335914L;
 
 	@NotBlank(message = "Project name is mandatory")
-	@NotNull(message = "Project name should be NULL")
+	@NotNull(message = "Project name should not be NULL")
 	private String project_name;
 
 	private int id;
