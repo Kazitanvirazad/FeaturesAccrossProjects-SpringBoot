@@ -138,7 +138,7 @@ public class DaoToDtoConverter {
 	public DomainDTO copyDomainToDomainDTO(Domain domain) {
 		DomainDTO domainDTO = new DomainDTO();
 		if (domain != null) {
-			domain.setDomain_name(domain.getDomain_name());
+			domainDTO.setDomain_name(domain.getDomain_name());
 		}
 		return domainDTO;
 	}

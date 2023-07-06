@@ -8,10 +8,12 @@ import java.util.Map;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.hibernate.TransientPropertyValueException;
 
 import com.featuresaccrossprojects.featuresdata.util.ResponseObject;
 
@@ -35,6 +37,20 @@ public class HandleValidation {
 		errorMap.put("fields", fieldErrorList);
 		return new ResponseEntity<>(new ResponseObject(true, "Form Field error", errorMap), new HttpHeaders(),
 				HttpStatus.BAD_REQUEST);
+	}
+
+	@ExceptionHandler(HttpMessageNotReadableException.class)
+	public ResponseEntity<ResponseObject> handleHttpMessageNotReadableErrors(HttpMessageNotReadableException ex) {
+		return new ResponseEntity<>(
+				new ResponseObject(true, "Invalid/Not Acceptable JSON format in service request body"),
+				new HttpHeaders(), HttpStatus.BAD_REQUEST);
+	}
+	
+	@ExceptionHandler(TransientPropertyValueException.class)
+	public ResponseEntity<ResponseObject> handleTransientPropertyValueExceptionErrors(TransientPropertyValueException ex) {
+		return new ResponseEntity<>(
+				new ResponseObject(true, "Missing request body JSON attributes"),
+				new HttpHeaders(), HttpStatus.BAD_REQUEST);
 	}
 
 }
