@@ -8,7 +8,7 @@
 	<li>PostgreSQL database</li>
 	<li>ehcache - 2.10.1</li>
 </ul>
-<h4>git repo of the ReactJS User Interface - https://github.com/Kazitanvirazad/FeaturesAccrossProjects-ReactUI.git </h4>
+<h4>git repo of the ReactJS User Interface - <a target="_blank" href="https://github.com/Kazitanvirazad/FeaturesAccrossProjects-ReactUI.git"><span>FeaturesAccrossProjects-ReactUI</span></a> </h4>
 <h4>Benefits of Application - </h4>
 <ol>
 <li>Search feature/integration implemented across already build project(s)</li>
