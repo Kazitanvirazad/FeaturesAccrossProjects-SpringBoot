@@ -17,7 +17,9 @@
 <li>Product Managers to upgrade them on the features and their workflows</li>
 <li>Provision to add more advanced features and projects inside application</li>
 </ol>	
-
+<p align="left">
+  <img src="sql_queries/Database ERD.png" />
+</p>
 <h4>API Documentation - </h4>
 <h5><u>Get Form Input data:</u> </h5>
 <p><u>Api Details:</u> Rest API to get 'addproject' and 'addfeature' form input data from predefined value list.</p>
