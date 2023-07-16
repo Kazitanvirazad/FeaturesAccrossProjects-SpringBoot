@@ -17,6 +17,7 @@
 <li>Product Managers to upgrade them on the features and their workflows</li>
 <li>Provision to add more advanced features and projects inside application</li>
 </ol>	
+<h4>ERD Diagram of Features database</h4>
 <p align="left">
   <img src="sql_queries/Database ERD.png" />
 </p>
